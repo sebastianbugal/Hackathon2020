@@ -12,5 +12,3 @@ func _physics_process(delta):
 		apply_central_impulse(Vector2(0,-5).rotated(rotation))
 	if GettingEnergy:
 		Energy+=.01
-
-	
