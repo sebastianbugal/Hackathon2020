@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://AlienTileSet.png" type="Texture" id=1]
 [ext_resource path="res://lord.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Starpew/Starpew.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Energy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -522,6 +523,10 @@ __meta__ = {
 }
 
 [node name="lord" parent="." instance=ExtResource( 2 )]
+linear_damp = 1.0
 
 [node name="Starpew" parent="." instance=ExtResource( 3 )]
 position = Vector2( 17.8794, 152.408 )
+
+[node name="Energy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 100, 0 )
