@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://BasicLauncher.gd" type="Script" id=1]
+[ext_resource path="res://Towers/BasicLauncher.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 160.0
+
+[node name="BasicLauncher" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="ThreatRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThreatRange"]
+shape = SubResource( 1 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="body_entered" from="ThreatRange" to="." method="_on_ThreatRange_body_entered"]
+[connection signal="body_exited" from="ThreatRange" to="." method="_on_ThreatRange_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
