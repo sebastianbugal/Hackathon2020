@@ -9,6 +9,8 @@ extents = Vector2( 37.0503, 34.0465 )
 [node name="lord" type="RigidBody2D" groups=[
 "Player",
 ]]
+collision_layer = 16
+collision_mask = 5
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource( 1 )

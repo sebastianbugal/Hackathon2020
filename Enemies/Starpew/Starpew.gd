@@ -1,5 +1,10 @@
 extends RigidBody2D
 
+onready var exploision = preload("res://Explosion.tscn")
+
+signal killed
+
+var health = 50
 var path : = PoolVector2Array() setget set_path
 
 func _ready() -> void:
@@ -29,3 +34,11 @@ func set_path(value : PoolVector2Array) -> void:
 	if value.size() == 0:
 		return
 	set_process(true)
+
+func _physics_process(delta):
+	if health <= 0:
+		emit_signal("killed", self)
+		var e = exploision.instance()
+		e.transform = transform
+		get_tree().current_scene.add_child(e)
+		queue_free()

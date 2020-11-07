@@ -527,9 +527,6 @@ __meta__ = {
 position = Vector2( 6.23633, -16.0362 )
 linear_damp = 1.0
 
-[node name="Starpew" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3.99829, 108.626 )
-
 [node name="Energy" parent="." instance=ExtResource( 4 )]
 position = Vector2( -7.02716, -244.317 )
 
@@ -539,3 +536,6 @@ position = Vector2( 5.69629, 302.02 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
 [node name="Line2D" type="Line2D" parent="."]
+
+[node name="Starpew" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6.41089, 116.53 )

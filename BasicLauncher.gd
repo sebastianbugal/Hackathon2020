@@ -4,6 +4,9 @@ onready var missile = preload("res://Missile.tscn")
 
 var targets =[]
 
+func _ready():
+	connect("killed", self, "enemy_killed")
+
 func _on_ThreatRange_body_entered(body):
 	if body.is_in_group("Enemy"):
 		if not targets.has(body):
@@ -19,3 +22,7 @@ func _on_ShootTimer_timeout():
 		var m = missile.instance()
 		m.target = targets[0]
 		add_child(m)
+
+func enemy_killed(enemy):
+	if targets.has(enemy):
+		targets.remove(targets.find(enemy))
