@@ -1,6 +1,6 @@
 extends Node2D
 
-var health = 50
+var health = 10
 
 func _physics_process(delta):
 	if health < 0:
