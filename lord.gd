@@ -23,4 +23,4 @@ func _physics_process(delta):
 
 
 func _on_Timer_timeout():
-	$Particles2D.restart
+	$Particles2D.restart()
