@@ -21,7 +21,7 @@ linear_accel = -10.0
 "Player",
 ]]
 collision_layer = 16
-collision_mask = 5
+collision_mask = 16
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource( 1 )

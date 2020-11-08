@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Hackathon2020"
 run/main_scene="res://App.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [display]
@@ -71,4 +72,5 @@ DropTower2={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

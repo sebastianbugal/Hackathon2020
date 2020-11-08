@@ -40,3 +40,17 @@ func set_path(value : PoolVector2Array) -> void:
 		return
 	set_process(true)
 
+
+
+func _on_Starpew_body_entered(body):
+	#print(body)
+	if body.is_in_group("Core"):
+		print("Hit")
+		body.health -= 1
+		queue_free()
+
+
+func _on_Hit_area_entered(area):
+	if area.is_in_group("Core"):
+		area.get_parent().health -= 1
+		queue_free()

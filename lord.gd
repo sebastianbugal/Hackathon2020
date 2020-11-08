@@ -14,7 +14,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("backward"):
 		apply_central_impulse(Vector2(0,-5).rotated(rotation))
 	if GettingEnergy and Energy < max_energy:
-		Energy+=.01
+		Energy += 0.1
 	if Input.is_action_just_pressed("DropTower") and Energy >= 10:
 		var cur = tower.instance()
 		cur.position = position

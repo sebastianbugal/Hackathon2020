@@ -1,11 +1,8 @@
 extends Node2D
 
-var health =1000
+var health = 50
+
 func _physics_process(delta):
-	pass
-	
-func _on_Core_body_entered(body):
-	print("entered")
-	if body.is_in_group("Enemy"):
-		health-=20
-		print(health)
+	if health < 0:
+		get_tree().change_scene("res://GameOver.tscn")
+		#pass
